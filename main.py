@@ -4,6 +4,8 @@ import numpy as np
 from preprocessing import *
 import random
 import copy
+
+# Determines the contours of the searched image
 contours, hierarchy = cv.findContours(edges, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_NONE)
 
 OGcopy = copy.copy(loaded_image)
