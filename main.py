@@ -18,16 +18,12 @@ if __name__ == "__main__":
   
 
     cv.imshow("Edge Detected Image", edges)
-    # plt.show()
-    #cv.imwrite('grayscaleimage.jpg', gray_image)
+    
     cv.waitKey(0)
     cv.imshow("Drawed contours image", OGcopy)
     print(len(contours), "objects were found in this image file")
 
-    #print("Image shape:", OGcopy.shape)
-
     for i, cont in enumerate(contours):
-    #     print("Points on contour of object ", i, " ", cont)
         print("Area of object", i, ": ", cv.contourArea(cont), "pixels")
     cv.waitKey(0)
     cv.destroyAllWindows()
